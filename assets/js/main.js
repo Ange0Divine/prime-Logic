@@ -187,3 +187,37 @@
   }
 
 })();
+// ─── TIMELINE ANIMATION ───────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  if (typeof gsap !== 'undefined') {
+    var timelineSteps = document.querySelectorAll('.timeline-step');
+    timelineSteps.forEach(function(step, i) {
+      var num = step.querySelector('.timeline-num');
+      var title = step.querySelector('.timeline-title');
+      var text = step.querySelector('.timeline-text');
+      // Hide initially
+      gsap.set(num, { x: -60, opacity: 0 });
+      gsap.set([title, text], { opacity: 0 });
+    });
+    // Animate in sequence
+    timelineSteps.forEach(function(step, i) {
+      var num = step.querySelector('.timeline-num');
+      var title = step.querySelector('.timeline-title');
+      var text = step.querySelector('.timeline-text');
+      gsap.to(num, {
+        x: 0,
+        opacity: 1,
+        duration: 0.7,
+        delay: i * 0.4,
+        ease: 'power3.out',
+        onComplete: function() {
+          gsap.to([title, text], {
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.15
+          });
+        }
+      });
+    });
+  }
+});
