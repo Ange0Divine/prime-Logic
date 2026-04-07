@@ -300,14 +300,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ─── GRID UTILITIES ───────────────────────────────────────── */
-.grid {
-  display: grid;
+.grid-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--sp-6);
 }
 
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
+/* Make sure cards have consistent width and are centered */
+.grid-4 > .card {
+  flex: 1 1 260px;
+  max-width: 340px;
+  min-width: 220px;
+  margin: var(--sp-4) var(--sp-3);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Center cards in grid-4, even if fewer than 4 */
+.grid-4 > .card {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .flex {
   display: flex;
