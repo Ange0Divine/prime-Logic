@@ -11,7 +11,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-disay: swap;
   src: local('Inter');
 }
 
@@ -446,14 +446,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: var(--sp-1);
+  gap: var(--sp-2);
 }
 
 .nav-menu a {
   font-size: var(--fs-small);
   font-weight: var(--fw-medium);
   color: var(--muted);
-  padding: var(--sp-2) var(--sp-3);
+  padding: var(--sp-4) var(--sp-1);
   border-radius: var(--radius-sm);
   transition: all var(--duration-fast) var(--ease);
   position: relative;
@@ -2660,7 +2660,7 @@ select.form-field {
 /* Image area */
 .cs-card__img-wrap {
   position: relative;
-  height: 220px;
+  height: 150px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -2774,8 +2774,8 @@ select.form-field {
 .cs-card__results {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-3);
-  padding: var(--sp-4);
+  gap: var(--sp-1);
+  padding: var(--sp-1);
   background: var(--bg-warm);
   border: 1px solid var(--line-light);
   border-radius: var(--radius-lg);
@@ -2784,16 +2784,16 @@ select.form-field {
 .cs-card__metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-3);
-  margin-top: var(--sp-2);
+  gap: var(--sp-1);
+  margin-top: var(--sp-1);
 }
 
 .cs-card__metric {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
   text-align: center;
-  padding: var(--sp-3) var(--sp-2);
+  padding: var(--sp-2) var(--sp-1);
   background: var(--bg);
   border-radius: var(--radius);
   border: 1px solid var(--line);
@@ -3097,7 +3097,7 @@ select.form-field {
 
 /* ─── CONSULTING PACKAGES SECTION ──────────────────────────── */
 .pkg-section {
-  background: var(--bg-warm);
+  background: var(--bg-alt);
   border-top: 1px solid var(--line-light);
   border-bottom: 1px solid var(--line-light);
 }
@@ -3390,7 +3390,7 @@ select.form-field {
 
 /* ─── PRIME LOOP METHODOLOGY SECTION ───────────────────────── */
 .pl-section {
-  background: linear-gradient(160deg, #080f2a 0%, #0d1a3e 60%, #071e2e 100%);
+  background: var(--bg-warm);
   padding: var(--sp-11) 0 var(--sp-10);
   position: relative;
   overflow: hidden;
@@ -3440,7 +3440,7 @@ select.form-field {
 .pl-title {
   font-size: var(--fs-h1);
   font-weight: var(--fw-extrabold);
-  color: #fff;
+  color: #0c0127;
   letter-spacing: -0.03em;
   line-height: var(--lh-tight);
   margin-bottom: var(--sp-5);
@@ -3449,7 +3449,7 @@ select.form-field {
 
 .pl-intro {
   font-size: var(--fs-body-lg);
-  color: rgba(255,255,255,.6);
+  color: rgba(12, 4, 62, 0.6);
   line-height: var(--lh-relaxed);
   max-width: 52ch;
 }
@@ -3505,13 +3505,13 @@ select.form-field {
 .pl-badge__title {
   font-size: var(--fs-body);
   font-weight: var(--fw-semibold);
-  color: #fff;
+  color: #0b041f;
   line-height: 1.3;
 }
 
 .pl-badge__sub {
   font-size: var(--fs-small);
-  color: rgba(255,255,255,.45);
+  color: rgba(1, 4, 37, 0.45);
   margin-top: 2px;
 }
 
@@ -3542,10 +3542,10 @@ select.form-field {
   flex: 1;
   min-width: 0;
   background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
+  border: 2px solid rgba(1, 2, 19, 0.08);
   border-top: 3px solid transparent;
   border-radius: var(--radius-lg);
-  padding: var(--sp-6) var(--sp-5);
+  padding: var(--sp-4) var(--sp-3);
   transition: background var(--duration) var(--ease), transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
   position: relative;
 }
@@ -3590,7 +3590,7 @@ select.form-field {
 .pl-card__title {
   font-size: var(--fs-h4);
   font-weight: var(--fw-bold);
-  color: #fff;
+  color: #04021a;
   margin-bottom: var(--sp-1);
   letter-spacing: -0.01em;
 }
@@ -3600,15 +3600,15 @@ select.form-field {
   font-weight: var(--fw-semibold);
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  color: rgba(255,255,255,.35);
+  color: rgba(4, 4, 18, 0.35);
   margin-bottom: var(--sp-4);
 }
 
 .pl-card__text {
   font-size: var(--fs-small);
-  color: rgba(255,255,255,.55);
+  color: rgba(3, 0, 14, 0.55);
   line-height: var(--lh-relaxed);
-  margin-bottom: var(--sp-5);
+  margin-bottom: var(--sp-3);
 }
 
 .pl-card__list {
@@ -3616,12 +3616,12 @@ select.form-field {
   flex-direction: column;
   gap: var(--sp-2);
   border-top: 1px solid rgba(255,255,255,.07);
-  padding-top: var(--sp-4);
+  padding-top: var(--sp-2);
 }
 
 .pl-card__list li {
   font-size: var(--fs-xs);
-  color: rgba(255,255,255,.4);
+  color: rgba(3, 1, 13, 0.4);
   display: flex;
   align-items: center;
   gap: var(--sp-2);
@@ -3659,7 +3659,7 @@ select.form-field {
 
 .pl-trust__text {
   font-size: var(--fs-body-lg);
-  color: rgba(255,255,255,.65);
+  color: rgba(1, 0, 6, 0.65);
   line-height: var(--lh-normal);
   max-width: 60ch;
 }
